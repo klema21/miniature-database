@@ -1,5 +1,5 @@
 build:
-	g++ -w -std=c++17 -Wfatal-errors \
+	g++ -w -std=c++17 \
 	*.cpp \
 	-o database 
 
