@@ -1,30 +1,34 @@
 #pragma once
 
 #include <map>
+#include <string>
 #include "date.h"
 
 class Database {
 public:
-	void AddEvent(const Date& date, const string& event){
+	void AddEvent(const Date& date, const std::string& event){
 		data[date] = event;
 	}
-	bool DeleteEvent(const Date& date, const string& event){
-		data.erase(date);
+	bool DeleteEvent(const Date& date, const std::string& event){
+		data[date] = "";
 		return true;
 	}
-	int DeleteDate(const Date& date);
+	int DeleteDate(const Date& date){
+		data.erase(date);
+		return 0;
+	}
 
 	// ???	Find(const Date& date) const;
 
 	void Print() const{
 		for(auto const& [key, val] : data){
-			cout << key.GetDay() << "/"
+				std::cout << key.GetDay() << "/"
 				 << key.GetMonth() << "/"
 				 << key.GetYear() << "/"
-				 << " " << val << endl;
+				 << " " << val << std::endl;
 		}
 	}
 private:
-	map<Date, string> data;
+	std::map<Date, std::string> data;
 };
 
