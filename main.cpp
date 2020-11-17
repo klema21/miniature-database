@@ -1,11 +1,6 @@
 #include "tokenizer.h"
 #include "database.h"
 
-void close_input_buffer(InputBuffer* input_buffer){
-	delete input_buffer->buffer;
-	delete input_buffer;
-}
-
 int main(){
 	InputBuffer* input_buffer = new_input_buffer();
 	Database db;
