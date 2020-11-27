@@ -1,4 +1,4 @@
-#include "tokenizer.h"
+#include "tokenizer.hpp"
 
 InputBuffer* new_input_buffer(){
 	InputBuffer* input_buffer = new InputBuffer;

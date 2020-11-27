@@ -1,5 +1,5 @@
-#include "tokenizer.h"
-#include "database.h"
+#include "tokenizer.hpp"
+#include "database.hpp"
 
 int main(){
 	InputBuffer* input_buffer = new_input_buffer();
