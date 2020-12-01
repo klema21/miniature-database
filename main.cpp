@@ -1,7 +1,7 @@
 #include "tokenizer.hpp"
 #include "database.hpp"
 
-int main(){
+auto main() -> int{
 	InputBuffer* input_buffer = new_input_buffer();
 	Database db;
 	while(true){
